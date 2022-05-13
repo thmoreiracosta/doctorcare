@@ -22,30 +22,26 @@ body {
   font-family: 'DM Sans';
   font-size: 1.6rem;
   text-align: center;
-  
 }
 
 .wrapper {
   width: 37.5rem;
   margin-inline: auto;
   padding-inline: 2.4rem;
-
-   
 }
 
 /*========= HEADER =========*/
 
 header {
- 
   margin-top: calc(4.1rem + var(--nav-height));
   padding-right: 2rem;
   padding-left: 2rem;
 }
 
 header::before {
-  content: "";
+  content: '';
   width: 100vw;
-  height: 108rem;
+  height: calc(108rem + var(--nav-height));
   background-color: var(--green-line);
   display: block;
   position: absolute;
@@ -100,7 +96,7 @@ header button {
   margin-inline: auto;
 }
 
-header figure img  {
+header figure img {
   width: 26.4rem;
   display: block;
   margin-inline: auto;
@@ -140,18 +136,30 @@ header figure img  {
 
 nav {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  
+
   height: var(--nav-height);
 
   position: fixed;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-
-
-
 }
 
+div.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
+nav.scroll {
+  background: var(--primary-color);
+  width: 100vw;
+}
+
+nav.scroll svg:nth-child(1) path {
+  fill: white;
+}
+
+nav.scroll svg:nth-child(2) path {
+  stroke: white;
+}
